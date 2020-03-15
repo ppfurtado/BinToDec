@@ -26,5 +26,3 @@ export const Input = styled.input`
   border: solid 0.1em;
   border-radius: 3px;
 `
-
-

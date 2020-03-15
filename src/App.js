@@ -19,9 +19,13 @@ export default class App extends Component {
     })
   }
   handleClick(){
-    const regex = new RegExp('[a-zA-Z2-9]','gi')
+    const regex = new RegExp('[a-zA-Z2-9\\s]','gi')
     const binarios = this.state.valueBin.match(regex)
     if(binarios !== null){
+      this.setState({
+        valueBin: "",
+        valueDec: ""
+      })
       return alert("Entre com um valor binário");
     }
     this.setState({
@@ -35,6 +39,7 @@ export default class App extends Component {
   render(){
     return(
       <AppComponent
+      valueInputBin={this.state.valueBin}
       valueInputDec={this.state.valueDec} 
       handleChange={this.handleChange}
       handleClick={this.handleClick} />
