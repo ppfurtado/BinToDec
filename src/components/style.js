@@ -5,11 +5,9 @@ export const Container = styled.div`
   text-align: center;
   margin: 0 auto 0 auto;
 `
-
 export const Title = styled.h1`
-  font-size: 1me;
+  font-size: 1em;
 `
-
 export const Button = styled.button`
   color: palevioletred;
   font-size: 1em;
